@@ -36,8 +36,8 @@ let g:NERDTreeDirArrowCollapsible="~"
 let g:airline_theme='simple'
 let mapleader = " "
 
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
+inoremap <tab> <Down>
+inoremap <S-tab> <Up>
 nnoremap <leader>l $
 nnoremap <leader>h 0
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
