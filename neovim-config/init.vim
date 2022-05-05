@@ -44,6 +44,7 @@ nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 nnoremap <leader>f :NERDTreeFocus<CR>
 nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
+vmap <C-y> "+y
 nmap <F8> :TagbarToggle<CR>
 :set completeopt-=preview " For No Previews
 
