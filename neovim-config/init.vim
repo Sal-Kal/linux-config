@@ -1,6 +1,6 @@
 inoremap jk <Esc>
 set number
-set relativenumber
+" set relativenumber
 set ai
 set si
 set cindent
@@ -56,3 +56,4 @@ highlight PmenuSbar ctermbg=000
 highlight PmenuSbar ctermfg=000
 highlight PmenuThumb ctermfg=226
 highlight PmenuThumb ctermbg=226
+highlight LineNr ctermfg=cyan
