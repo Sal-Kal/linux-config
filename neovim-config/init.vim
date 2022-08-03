@@ -38,8 +38,8 @@ let mapleader = " "
 
 inoremap <tab> <Down>
 inoremap <S-tab> <Up>
-nnoremap <leader>l $
-nnoremap <leader>h 0
+nnoremap L $
+nnoremap H 0
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 nnoremap <leader>f :NERDTreeFocus<CR>
 nnoremap <leader>n :NERDTree<CR>
