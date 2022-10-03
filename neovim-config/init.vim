@@ -1,6 +1,6 @@
 inoremap jk <Esc>
 set number
-" set relativenumber
+set relativenumber
 set ai
 set si
 set cindent

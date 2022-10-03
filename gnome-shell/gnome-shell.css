@@ -1996,7 +1996,6 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 /* Notifications & Message Tray */
 .notification-banner {
-  margin-left: 1400px;
   width: 34em;
   min-height: 64px;
   margin: 2px 5px 8px;
@@ -2192,12 +2191,15 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
   border-width: 2px;
   border-color: black;
   margin-top: 7px;
-  margin-left: 600px;
-  margin-right: 500px;
-  background-color: #212121;
+  margin-left: 300px;
+  margin-right: 300px;
+  /* background-color: #212121; */
+  background-color: #000000;
+  /*background-color: #fefcdd;*/
   font-weight: bold;
   height: 32px;
-  color: rgba(255, 255, 255, 0.7);
+  /*color: rgba(255, 255, 255, 0.7);*/
+  /* color: black; */
   font-feature-settings: "tnum";
   transition-duration: 250ms;
   font-size: 11pt;
@@ -3094,12 +3096,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:ltr {
   padding-left: 12px !important;
-  margin-left: 3px !important;
+  margin-left: 0 !important;
 }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:rtl {
   padding-right: 12px !important;
-  margin-right: 3px !important;
+  margin-right: 0 !important;
 }
 
 .search-entry {
