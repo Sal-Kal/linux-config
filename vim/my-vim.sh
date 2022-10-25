@@ -31,6 +31,8 @@ inoremap jk <Esc>
 \ninoremap <S-tab> <Up>
 \nnnoremap L $
 \nnnoremap H 0
+\nnnoremap <C-j> <C-d>
+\nnnoremap <C-k> <C-u>
 \nnnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 \nset completeopt-=preview \" For No Previews
 \n
