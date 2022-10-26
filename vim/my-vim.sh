@@ -1,44 +1,5 @@
 #!/bin/bash
 
-FILE_CONTENT="
-inoremap jk <Esc>
-\nset number
-\nset relativenumber
-\nset ai
-\nset si
-\nset cindent
-\nset shiftwidth=4
-\nset mouse=a
-\nset smarttab
-\nset tabstop=4
-\nset softtabstop=4
-\nfiletype indent on
-\nfiletype plugin indent on
-\n
-\ncall plug#begin()
-\n
-\nPlug 'http://github.com/tpope/vim-surround' \" Surrounding ysw)
-\nPlug 'https://github.com/tpope/vim-commentary' \" For Commenting gcc & gc
-\nPlug 'https://github.com/ap/vim-css-color' \" CSS Color Preview
-\nPlug 'https://github.com/terryma/vim-multiple-cursors' \" CTRL + N for multiple cursors
-\nPlug 'https://github.com/jiangmiao/auto-pairs'
-\n
-\ncall plug#end()
-\n
-\nlet mapleader = \" \"
-\n
-\ninoremap <tab> <Down>
-\ninoremap <S-tab> <Up>
-\nnnoremap L $
-\nnnoremap H 0
-\nnnoremap <C-j> <C-d>
-\nnnoremap <C-k> <C-u>
-\nnnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
-\nset completeopt-=preview \" For No Previews
-\n
-\nhighlight LineNr ctermfg=cyan
-"
-
 sudo apt update
 
 echo
@@ -108,7 +69,7 @@ echo
 echo "Configuring Vim..."
 
 echo -ne "Configuration file.................\e[1;36m[ Configuring ]\e[0m\r"
-echo -e $FILE_CONTENT > ~/.vimrc
+curl -o ~/.vimrc https://raw.githubusercontent.com/Sal-Kal/linux-config/master/vim/vimrc > /dev/null 2>&1
 sleep 1
 if [ $? -eq 0 ]; then
 	echo -ne "Configuration file.................\e[1;32m[ OK ]          \e[0m\r"
