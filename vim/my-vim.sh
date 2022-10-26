@@ -37,6 +37,9 @@ inoremap jk <Esc>
 \nset completeopt-=preview \" For No Previews
 \n
 \nhighlight LineNr ctermfg=cyan
+\nif has("autocmd")
+\n  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+\nendif
 "
 
 sudo apt update
