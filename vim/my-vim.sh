@@ -44,22 +44,17 @@ fi
 
 echo -ne "\n"
 
-ls -a ~/.vim/autoload/ | grep plug.vim > /dev/null 2>&1
-
+echo -ne "Vim-Plug...........................\e[1;36m[ Installing ]\e[0m\r"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /dev/null 2>&1
+sleep 1
 if [ $? -eq 0 ]; then
 	echo -ne "Vim-Plug...........................\e[1;32m[ OK ]        \e[0m\r"
 else
-	echo -ne "Vim-Plug...........................\e[1;36m[ Installing ]\e[0m\r"
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /dev/null 2>&1
-	if [ $? -eq 0 ]; then
-		echo -ne "Vim-Plug...........................\e[1;32m[ OK ]        \e[0m\r"
-	else
-		echo -ne "Vim-Plug...........................\e[1;31m[ ERROR ]        \e[0m\r"
-		echo -ne "\n"
-		echo "Aborting..."
-		exit 0
-	fi
+	echo -ne "Vim-Plug...........................\e[1;31m[ ERROR ]        \e[0m\r"
+	echo -ne "\n"
+	echo "Aborting..."
+	exit 0
 fi
 
 echo -ne "\n"
