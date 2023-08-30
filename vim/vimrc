@@ -35,6 +35,8 @@ nnoremap <leader>bh :bprevious<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>o :vi 
 nnoremap <leader>bk :q<cr>
+xnoremap > >gv
+xnoremap < <gv
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 set completeopt-=preview " For No Previews
 
